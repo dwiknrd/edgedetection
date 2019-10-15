@@ -1,0 +1,259 @@
+object Form1: TForm1
+  Left = 233
+  Top = 56
+  Width = 1016
+  Height = 916
+  Caption = 'Form1'
+  Color = clWhite
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Image1: TImage
+    Left = 0
+    Top = 0
+    Width = 1073
+    Height = 209
+    OnClick = Image1Click
+  end
+  object Bevel1: TBevel
+    Left = 392
+    Top = 280
+    Width = 169
+    Height = 193
+  end
+  object Bevel2: TBevel
+    Left = 64
+    Top = 240
+    Width = 289
+    Height = 297
+  end
+  object Bevel3: TBevel
+    Left = 600
+    Top = 240
+    Width = 297
+    Height = 305
+  end
+  object StaticText1: TStaticText
+    Left = 408
+    Top = 272
+    Width = 48
+    Height = 24
+    Caption = 'Menu'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -17
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 0
+  end
+  object Panel1: TPanel
+    Left = 80
+    Top = 264
+    Width = 265
+    Height = 265
+    TabOrder = 1
+    object Image2: TImage
+      Left = 1
+      Top = 1
+      Width = 263
+      Height = 263
+      Align = alClient
+      Stretch = True
+    end
+    object GarisPandu: TImage
+      Left = 1
+      Top = 1
+      Width = 263
+      Height = 263
+      Align = alClient
+      Transparent = True
+      OnMouseMove = GarisPanduOnMouseMove
+    end
+  end
+  object Panel2: TPanel
+    Left = 616
+    Top = 264
+    Width = 265
+    Height = 265
+    TabOrder = 2
+    object Image3: TImage
+      Left = 1
+      Top = 1
+      Width = 263
+      Height = 263
+      Align = alClient
+    end
+    object GarisPandu2: TImage
+      Left = 1
+      Top = 1
+      Width = 263
+      Height = 263
+      Align = alClient
+      Transparent = True
+      OnMouseMove = GarisPanduOnMouseMove
+    end
+  end
+  object Button1: TButton
+    Left = 248
+    Top = 232
+    Width = 99
+    Height = 25
+    Cursor = crHandPoint
+    Caption = 'Browse Image'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 3
+    OnClick = Button1Click
+  end
+  object StaticText2: TStaticText
+    Left = 72
+    Top = 232
+    Width = 120
+    Height = 24
+    Caption = 'Original Image'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 4
+  end
+  object StaticText3: TStaticText
+    Left = 608
+    Top = 232
+    Width = 120
+    Height = 24
+    Caption = 'Filtered Image'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 5
+  end
+  object Button2: TButton
+    Left = 416
+    Top = 344
+    Width = 121
+    Height = 25
+    Cursor = crHandPoint
+    Caption = 'Laplacian'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 6
+    OnClick = LaplacianDetect
+  end
+  object Button3: TButton
+    Left = 416
+    Top = 304
+    Width = 121
+    Height = 25
+    Cursor = crHandPoint
+    Caption = 'Smoothing'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 7
+    OnClick = SmoothingDetect
+  end
+  object Button4: TButton
+    Left = 416
+    Top = 384
+    Width = 121
+    Height = 25
+    Cursor = crHandPoint
+    Caption = 'Sobel'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 8
+    OnClick = SobelDetect
+  end
+  object Button5: TButton
+    Left = 416
+    Top = 424
+    Width = 121
+    Height = 25
+    Caption = 'Prewitt'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 9
+    OnClick = PrewittDetect
+  end
+  object Chart1: TChart
+    Left = 80
+    Top = 552
+    Width = 801
+    Height = 185
+    BackWall.Brush.Color = clWhite
+    BackWall.Brush.Style = bsClear
+    Title.Text.Strings = (
+      'TChart')
+    View3D = False
+    TabOrder = 10
+    object Series2: TLineSeries
+      Marks.ArrowLength = 8
+      Marks.Visible = False
+      SeriesColor = clGreen
+      Title = 'Original Image'
+      Pointer.InflateMargins = True
+      Pointer.Style = psRectangle
+      Pointer.Visible = False
+      XValues.DateTime = False
+      XValues.Name = 'X'
+      XValues.Multiplier = 1
+      XValues.Order = loAscending
+      YValues.DateTime = False
+      YValues.Name = 'Y'
+      YValues.Multiplier = 1
+      YValues.Order = loNone
+    end
+    object Series3: TLineSeries
+      Marks.ArrowLength = 8
+      Marks.Visible = False
+      SeriesColor = clYellow
+      Title = 'Filtered Image'
+      Pointer.InflateMargins = True
+      Pointer.Style = psRectangle
+      Pointer.Visible = False
+      XValues.DateTime = False
+      XValues.Name = 'X'
+      XValues.Multiplier = 1
+      XValues.Order = loAscending
+      YValues.DateTime = False
+      YValues.Name = 'Y'
+      YValues.Multiplier = 1
+      YValues.Order = loNone
+    end
+  end
+  object OpenPictureDialog1: TOpenPictureDialog
+    Left = 216
+    Top = 232
+  end
+end
